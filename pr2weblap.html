@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style2.css">
+    <title>Rendezési algoritmusok projektmunka</title>
+</head>
+<body>
+    <div id="container">
+    <nav>   
+        <ul>
+            <li>
+                <a href="#1">A beszúrásos algoritmus működése</a>
+            </li>
+            <li>
+                <a href="#2">Hatékonysága, tárigénye</a>
+            </li>
+            <li>
+                <a href="#3">A program működése</a>
+            </li>
+            <li>
+                <a href="#4">A program kódja, leírása</a>
+            </li>
+        </ul>
+    </nav>
+    <a href="pr1weblap.html" target="_blank" id="ujoldal">A buborékos algoritmus</a>
+    <h1>
+         A beszúrásos rendezési algoritmus
+    </h1>
+    <h2 id="1">
+        A beszúrásos algoritmus működése
+    </h2>
+    <p>
+        A beszúrásos rendezés a rendezési algoritmusok egy csoportja.[1] Legegyszerűbb formája az egyenes beszúrásos rendezési algoritmus egy tömb elemeinek sorba rendezésére. Az algoritmus k-adik lépése előtt az első k-1 elem már rendezett; a lépés során a k-adik elemet beszúrjuk az első k-1 elem közé az őt nagyság szerint megillető helyre, és a nála nagyobbakat eggyel eltoljuk.    </p>
+    <p>
+        Az eljárás hasonlít a kiválasztásos rendezéshez, ahol szintén a k-adik lépés végére az első k elem rendezett; de míg ott az első k helyen a végleges, rendezett sorozat eleje van, addig a beszúrásos rendezésnél a kezdeti, rendezetlen állapot első k eleme, de azok helyes sorrendben.
+    </p>
+    <p>
+        A tömböt az elejétől vizsgálva az egymás után következő elemeket hasonlítja össze. Ha olyat talál, hogy a második elem kisebb, mint az első, megcseréli a két elemet. Így a nagy elemek mint egy 'buborék' haladnak a tömb vége felé, a helyükre. Ha eléri a tömb végét, újra indul elölről. A rendezés akkor fejeződik be, ha az
+újraindulás után már nem történt egyetlen csere sem.
+
+    </p>
+    <h2 id="2">
+        Hatékonysága, tárigénye
+    </h2>
+    <p>
+        A beszúrásos rendezés lépésszáma legrosszabb és átlagos esetben is négyzetes, így nagy tömbök esetén nem hatékony. Nagyon kis tömbökre azonban ez a leggyorsabb algoritmus.
+        </p>
+        <p>   
+        Az egyik legegyszerűbb rendezés. A tömb elejéről indulva vizsgálja az elemeket, és ha talál
+        egy olyan elemet, ami kisebb bármelyik eddig vizsgáltnál, akkor annak megkeresi a helyét a
+        már vizsgált tömbrészben, majd 'beszúrja' oda így minden egyes követő elemet "feljebb" kell csúsztatni
+
+        </p>
+
+    
+    <p>
+
+    </p>
+    <h2 id="3">
+        A program működése
+    </h2>
+    <img src="biz2.png" alt="" id="biz2">
+    <h2 id="4">
+        A program kódja, leírása
+    </h2>
+    <p>
+    def insertion_sort(list):
+    </p>    
+    <p id="p1">  
+    for keyPos in range(1, len(list)): -Induljon el a második elemtől (pos 1),használjuk ezt az elemet és illesszük be a listába.
+</p>  
+        <p class="p2">keyValue = list[keyPos]</p> -Adjunk értéket az elemnek, amit beillesztünk.
+        <p class="p2">
+            scanPos = keyPos - 1 - keressünk jobbról balra (lista kezdete felé)
+        </p>
+        <p class="p2">
+            while (scanPos >= 0) and (list[scanPos] > keyValue): -Ismételjünk minden elemt, mozgassuk,amíg elérjük a pozíciót.
+        </p>
+        <p id="p3">
+            list[scanPos + 1] = list[scanPos]
+        </p>
+          <p id="p3">
+            scanPos = scanPos - 1
+          </p>
+        <p id="p4">
+            list[scanPos +  1] = keyValue - Minden el lett vive az útból, illesszük be a kulcsot a megfelelő helyre.
+        </p>
+        
+        <p>
+            Forrás: <a href="http://programarcadegames.com/index.php?lang=hu&chapter=sorting">http://programarcadegames.com/index.php?lang=hu&chapter=sorting</a>
+        </p>
+    <img src="besz1.png"id="kep1">
+</body>
+<footer>
+    <h2>
+        Források:
+    </h2>
+    <ul>
+        <li>
+            <a href="https://hu.wikipedia.org/wiki/Rendez%C3%A9s_(programoz%C3%A1s)#Bubor%C3%A9krendez%C3%A9s">https://hu.wikipedia.org/wiki/Rendez%C3%A9s_(programoz%C3%A1s)#Bubor%C3%A9krendez%C3%A9s</a>
+            
+        </li>
+        <li>
+            <a href="https://anim.ide.sk/rendezesi_algoritmusok_1.php">https://anim.ide.sk/rendezesi_algoritmusok_1.php</a>
+        </li>
+        <li>
+            <a href=" https://www.ms.sapientia.ro/~kasa/adat10-11.pdf">https://www.ms.sapientia.ro/~kasa/adat10-11.pdf</a>
+            
+        </li>
+        <li>
+            <a href="https://doksi.net/hu/get.php?lid=9857">https://doksi.net/hu/get.php?lid=9857</a>
+            
+        </li>
+    </ul>
+</footer>
+</div>
+</html>

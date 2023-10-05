@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Rendezési algoritmusok projektmunka</title>
+</head>
+<body>
+    <div id="container">
+    <nav>   
+            <ul>
+                <li>
+                    <a href="#1">A buborékos algoritmus működése</a>
+                </li>
+                <li>
+                    <a href="#2">Hatékonysága, tárigénye</a>
+                </li>
+                <li>
+                    <a href="#3">A program működése</a>
+                </li>
+                <li>
+                    <a href="#4">A program kódja, leírása</a>
+                </li>
+            </ul>
+    </nav>
+    <br>
+    <a href="pr2weblap.html" target="_blank" id="ujoldal"> A beszúrásos algoritmus</a>
+    <h1>
+         A buborékos rendezési algoritmus
+    </h1>
+    <h2 id="1">
+        A buborékos algoritmus működése
+    </h2>
+    <p>
+        A buborékrendezés (angolul: Bubble sort) egy naiv algoritmus, amellyel egy véges (nem feltétlenül numerikus) sorozat – vagy számítástechnikai szóhasználattal élve egy tömb – elemei sorba rendezhetők [(n-1)n]/2 összehasonlítás elvégzésével, ahol n a sorozat elemeinek számát jelenti.
+    </p>
+    <p>
+        Az algoritmus alkalmazásának feltétele hogy a sorozat elemeihez létezzen egy rendezési reláció.
+    </p>
+    <p>
+        A tömböt az elejétől vizsgálva az egymás után következő elemeket hasonlítja össze. Ha olyat talál, hogy a második elem kisebb, mint az első, megcseréli a két elemet. Így a nagy elemek mint egy 'buborék' haladnak a tömb vége felé, a helyükre. Ha eléri a tömb végét, újra indul elölről. A rendezés akkor fejeződik be, ha az
+újraindulás után már nem történt egyetlen csere sem.
+
+    </p>
+    <h2 id="2">
+        Hatékonysága, tárigénye
+    </h2>
+    <p>
+        A buborékrendezés egy egyszerű algoritmus, amelyet főleg az oktatásban használunk, mivel nem igazán hatékony. Elve, hogy egy „buborékkal” haladva a tömbben több menetben elölről hátra a buborékban szereplő két elemet felcseréljük, ha azok rossz sorrendben vannak.
+    </p>
+
+    <h2 id="3">
+      A program  működése
+    </h2>
+    <img src="biz1.png" alt=""id="biz1">    
+    <h2 id="4">
+        A program kódja, leírása 
+    </h2>
+    <p>
+        all(szamok(item) for item in adat):
+    </p> 
+    <p id="p1">
+        def buborek_rendezes(adat, csokkeno=False):
+    </p>
+    <p class="p2">
+        a = len(adat)
+    </p>
+        <p class="p2">
+            for i in range(a):
+        </p>
+        <p id="p3">
+            for n in range(0, a-i-1):
+        </p>
+        <p id="p4">
+            if (csokkeno and int(adat[n]) < int(adat[n+1])) or (not csokkeno and int(adat[n]) > int(adat[n+1])):
+        </p>
+        <p id="p5">
+            adat[n], adat[n+1] = adat[n+1], adat[n]
+        </p>
+       <p>
+        A program először az összes "szamok" változó "item" változóját egy for ciklusba az adat változószor futtatja le. A "buborek_rendezes" függvényben az "adat" és "csokkeno" argumentumat adjuk meg. az "a" változó megszámolja hány adat van, amit a for i ciklus annyiszor futtat le. 
+        Aztán a for "n" ciklus nullától az "a" változó és az "i-1"-szer futtatja le.
+         Ha a "csokkeno" és az adatban lévő "n" változók nagyobbak mintha eggyel több lenne vagy "nem csokkeno" és az adatban lévő "n" változók kisebbek mintha eggyel több lenne, akkor az adat[n] és adat[n+1] egyenlő adat[n+1], adat[n]-nel.
+       </p>     
+      <p>
+        Forrás: Barna István
+      </p>                  
+       
+    <img src="bub1.png" alt="" id="kep1">
+</body>
+<footer>
+    <h2>
+        Források:
+    </h2>
+    <ul>
+        <li>
+            <a href="https://hu.wikipedia.org/wiki/Rendez%C3%A9s_(programoz%C3%A1s)#Bubor%C3%A9krendez%C3%A9s">https://hu.wikipedia.org/wiki/Rendez%C3%A9s_(programoz%C3%A1s)#Bubor%C3%A9krendez%C3%A9s</a>
+            
+        </li>
+        <li>
+            <a href="https://anim.ide.sk/rendezesi_algoritmusok_1.php">https://anim.ide.sk/rendezesi_algoritmusok_1.php</a>
+        </li>
+        <li>
+            <a href=" https://www.ms.sapientia.ro/~kasa/adat10-11.pdf">https://www.ms.sapientia.ro/~kasa/adat10-11.pdf</a>
+            
+        </li>
+        <li>
+            <a href="https://doksi.net/hu/get.php?lid=9857">https://doksi.net/hu/get.php?lid=9857</a>
+            
+        </li>
+    </ul>
+</footer>
+</div>
+
+</html>

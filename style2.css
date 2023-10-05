@@ -1,0 +1,104 @@
+:root
+{
+    --kek:rgb(21, 67, 194);
+    --skek:rgb(77, 73, 139);
+    --feh:rgba(5, 36, 71, 0.5);
+ }
+
+body
+{
+font-size: 25px;
+    background-image: url("agy.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white;
+}
+#container{
+    margin: auto;
+	background:linear-gradient(var(--feh,0.5),var(--kek,0.5));
+	width: 70%;
+	border:10px ridge rgba(35, 128, 216, 0.5);
+	border-radius:20px;
+    transition: 1s;
+}
+nav
+{
+    background:linear-gradient(var(--skek),var(--kek));
+    text-align: center;
+	border:2px solid rgba(255,255,255,0.5);
+	border-radius:10px;
+	font-size:1.1em;
+    list-style: none;
+}
+nav ul li
+{
+
+	text-align: center;
+	padding: 0.5em;
+    display: inline-block;
+}
+
+nav ul li a
+{
+	color:white;
+	text-decoration:none;
+	transition: 1s;
+}
+nav ul li a:hover
+{
+	background-color:lightblue;
+	color:white;
+}
+
+#ujoldal
+{
+    float: right;
+    font-size: 1em;
+}
+p{
+    font-size: 30px;
+    margin: 20px;
+    font-weight: 500;
+}
+footer
+{
+	text-align:center;
+	clear:both;
+}
+footer ul li
+{
+    list-style: none;
+}
+h1
+{
+    text-align: center;
+}
+#kep1{
+    float: right;
+    border: 10px ridge blue;
+    margin: 20px;
+    border-radius: 10px;
+    box-shadow: inset;
+   
+}
+#p1{
+    text-indent: 10px;
+    }
+.p2
+    {
+        text-indent: 20px; 
+    }
+#p3{
+        text-indent: 30px;
+        }
+#p4{
+            text-indent: 40px;
+            }
+#biz2
+            {
+float: inherit;
+border: 10px ridge skyblue;
+margin: 20px;
+border-radius: 10px;
+box-shadow: inset;
+            }          
