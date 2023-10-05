@@ -67,19 +67,14 @@ def main():
         data = [float(item) for item in data]
 
     print("Data read from file:", data)
-    ascending = input("Do you want to sort in ascending order? (y/n): ").lower() == 'y'
+    ascending = input("Növekvő vagy csökkenő sorrendbe szeretnéd rendezni? (n/c): ").lower() == 'n'
 
     bubble_sort(data, ascending)
-    print("Sorted data using Bubble Sort:", data)
+    print("Az adatok Bubble Sort segítségével rendezve:", data)
 
     merge_sort(data.copy())
-    print("Sorted data using Merge Sort:", data)
+    print("Az adatok egyesítési rendezés funkcióval rendezve:", data)
 
-    new_element = input("Enter a new element to insert: ")
-    if is_numeric([new_element]):
-        new_element = float(new_element)
-    insert_element(data, new_element)
-    print("Updated data after insertion:", data)
 
 if __name__ == "__main__":
     main()
